@@ -2,29 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Simple Video Page</title>
+    <title>Video Page with Ads</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        .container { max-width: 600px; margin: auto; }
-        .ad { background: #f9f9a9; padding: 16px; margin: 20px 0; text-align: center; border: 1px solid #e2e200; }
-        video { width: 100%; max-width: 100%; }
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .title {
+            margin: 40px 0 10px 0;
+            font-size: 2em;
+            text-align: center;
+        }
+        .ad {
+            background: #222;
+            color: #ffd700;
+            padding: 15px 30px;
+            margin: 10px 0 30px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .video-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+        video {
+            width: 640px;
+            max-width: 90vw;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>click for more </h1>
-        <video controls>
-            <source src= type="video/mp4">
-          
-        </video>
-        <div class="ads">https://www.underlingmistery.work/?sl=5979410-bb173&pub_click_id={External_ID_from_traffic_source}&site={subID}&pub_sub_id={sub_subID} 
-            <a href=" 
-                 
-            </a>
-            <!-- 
-            <br>
-            <strong>Ad:</strong> more contet here>
-        </div> class="ad">  
+        <div class="title">Welcome to the Video Page <span class="ad">[Ad: Try Our New Product!]</span></div>
+        
+        <div class="video-wrapper">
+            <video controls poster="https://via.placeholder.com/640x360?text=Video+Thumbnail">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="ad">[Ad: Get 50% Off on Your Next Purchase!]</div>
+        </div>
+        
+        <div class="title">Thank You for Watching <span class="ad">[Ad: Subscribe for More!]</span></div>
     </div>
-</body>
-</html>
